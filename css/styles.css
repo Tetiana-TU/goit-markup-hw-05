@@ -492,13 +492,15 @@ img {
   pointer-events: auto;
 }
 .modal {
+  position: relative;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
   border-radius: 4px;
   width: 408px;
   height: 584px;
-  padding: 72px 24px 24px 24px;
+  padding-right: 24px;
+  padding-left: 24px;
 }
 input,
 textarea {
@@ -514,25 +516,40 @@ textarea {
   text-align: center;
   color: #2e2f42;
   padding-bottom: 16px;
+  margin-top: 72px;
+  margin-bottom: 24px;
 }
+.input-wrapper-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  margin-right: 0;
+  fill: #2e2f42;
+  border-radius: 50%;
+
+stroke-width: 1px;
+stroke: rgba(0, 0, 0, 0.1);
+
+  }
 .form-label {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 8px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
+.form-imput.name {
+  border: 1px solid #4d5ae5;
+  position: relative;
+}
 .form-imput {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   width: 360px;
   height: 40px;
-}
-.form-imput.name {
-  border: 1px solid #4d5ae5;
+  
 }
 .form-imput.comment {
   border: 1px solid rgba(46, 47, 66, 0.4);
