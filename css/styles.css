@@ -536,14 +536,7 @@ color: #fff;
   border-radius: 4px;
   width: 408px;
   height: 584px;
-  padding-right: 24px;
-  padding-left: 24px;
-}
-input,
-textarea {
-  padding: 8px;
-  font-family: inherit;
-  font-size: inherit;
+  padding: 24px 24px; 
 }
 .modal-p {
   font-family: "Roboto", sans-serif;
@@ -552,22 +545,27 @@ textarea {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  margin-top: 72px;
+  margin-top: 48px;
   margin-bottom: 24px;
 }
 .input-wrapper-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   top: 24px;
   right: 24px;
   width: 24px;
   height: 24px;
   margin-right: 0;
-  fill: #2e2f42;
+  fill: #e7e9fc;
   border-radius: 50%;
 stroke-width: 1px;
 stroke: rgba(0, 0, 0, 0.1);
-
-  }
+}
+.form-icon-close {
+  fill: #2e2f42;
+}
 .form-label {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -605,6 +603,9 @@ stroke: rgba(0, 0, 0, 0.1);
 }
 .input-wrapper-email {
   position: relative;
+   margin-bottom: 26px;
+}
+.form-label-email {
   margin-top: 8px;
   margin-bottom: 4px;
 }
