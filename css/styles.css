@@ -433,6 +433,7 @@ img {
   display: inline-block;
   width: 208px;
   height: 80px;
+  margin-right: 80px;
 }
 .soc-title-footer {
   font-family: "Roboto", sans-serif;
@@ -470,6 +471,42 @@ img {
 .svg-footer {
   fill: #f4f4fd;
 }
+.input-btn-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 453px;
+  height: 80px;
+
+}
+.fotter-p {
+  font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #fff;
+}
+.form-imput-footer {
+  width: 264px;
+  height: 40px;
+}
+.form-button-footer {
+      border-radius: 4px;
+padding: 8px 24px;
+width: 165px;
+height: 40px;
+background: #4d5ae5;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.04em;
+text-align: center;
+color: #fff;
+}
+.form-icon-send {
+  fill: #fff;
+}
+
 /*---------------/footer----------*/
 /*-------modal---------*/
 .modal-overlay {
@@ -485,7 +522,7 @@ img {
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) .;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-overlay.is-open {
   opacity: 1;
@@ -515,7 +552,6 @@ textarea {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  padding-bottom: 16px;
   margin-top: 72px;
   margin-bottom: 24px;
 }
@@ -528,7 +564,6 @@ textarea {
   margin-right: 0;
   fill: #2e2f42;
   border-radius: 50%;
-
 stroke-width: 1px;
 stroke: rgba(0, 0, 0, 0.1);
 
@@ -542,22 +577,49 @@ stroke: rgba(0, 0, 0, 0.1);
 }
 .form-imput.name {
   border: 1px solid #4d5ae5;
-  position: relative;
-}
+  }
 .form-imput {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   width: 360px;
   height: 40px;
-  
 }
-.form-imput.comment {
+.input-wrapper-phone {
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+.form-icon-phone {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+.input-wrapper-person {
+  position: relative;
+  margin-bottom: 8px;
+}
+.form-icon-person {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+}
+.input-wrapper-email {
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+.form-icon-email {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+.form-imput-comment {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   width: 360px;
   height: 120px;
 }
-.form-imput.comment::placeholder {
+.form-imput-comment::placeholder {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -567,18 +629,29 @@ stroke: rgba(0, 0, 0, 0.1);
 .form-imput:focus {
   border-radius: 4D5AE5;
 }
-.accept {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-  margin-bottom: 24px;
-}
 .span-modal {
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #4d5ae5;
+}
+.input-wrapper-checkbox {
+  width: 360px;
+height: 16px;
+}
+.checkbox-modal {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  font-weight: 400;
+font-size: 12px;
+line-height: 1.2;
+letter-spacing: 0.04em;
+color: #8e8f99;
+}
+.checkbox-modal:hover {
+  border-radius: 2px;
+fill: #404bbf;
+border: 1px solid #404bbf;
 }
 .form-button {
   display: block;
