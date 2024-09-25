@@ -472,10 +472,9 @@ img {
   fill: #f4f4fd;
 }
 .input-btn-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 453px;
+  margin-left: auto;
+  display: inline;
+   width: 453px;
   height: 80px;
 
 }
@@ -485,14 +484,31 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: #fff;
+margin-bottom: 16px;
+}
+.footer-form-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.label-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .form-imput-footer {
   width: 264px;
   height: 40px;
+  background-color: #2e2f42;
+  border: 1px solid #fff;
+border-radius: 4px;
+margin-right: 24px;
 }
+
 .form-button-footer {
       border-radius: 4px;
-padding: 8px 24px;
+padding-top: 8px;
+padding-left: 24px;
 width: 165px;
 height: 40px;
 background: #4d5ae5;
@@ -500,17 +516,27 @@ font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.04em;
-text-align: center;
 color: #fff;
 }
 .form-icon-send {
   fill: #fff;
+  margin-left: 16px;
+}
+.form-imput-footer::placeholder {
+  padding-top: 8px;
+  padding-left: 16px;
+  font-weight: 400;
+font-size: 12px;
+line-height: 2;
+letter-spacing: 0.04em;
+color: #fff;
+
 }
 
 /*---------------/footer----------*/
 /*-------modal---------*/
 .modal-overlay {
-  background: rgba(46, 47, 66, 0.4);
+  background-color: rgba(46, 47, 66, 0.4);
   position: fixed;
   top: 0;
   left: 0;
@@ -521,22 +547,32 @@ color: #fff;
   justify-content: center;
   align-items: center;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  visibility: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-overlay.is-open {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 .modal {
   position: relative;
+  top: 50%;
+  left: 50%;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
-  background: #fcfcfc;
+  background-color: #fcfcfc;
   border-radius: 4px;
   width: 408px;
-  height: 584px;
-  padding: 24px 24px; 
+  min-height: 584px;
+  transform: translate(-50%, -50%);
+  padding: 24px 24px;
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.modal-overlay:not(.is-open) .modal {
+  transform: translate(-50%, -100%) scale(1.5);
 }
 .modal-p {
   font-family: "Roboto", sans-serif;
@@ -547,6 +583,7 @@ color: #fff;
   color: #2e2f42;
   margin-top: 48px;
   margin-bottom: 24px;
+
 }
 .input-wrapper-close {
   display: flex;
@@ -558,24 +595,62 @@ color: #fff;
   width: 24px;
   height: 24px;
   margin-right: 0;
-  fill: #e7e9fc;
+  background-color: #e7e9fc;
   border-radius: 50%;
 stroke-width: 1px;
 stroke: rgba(0, 0, 0, 0.1);
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.input-wrapper-close:hover,
+.input-wrapper-close:focus {
+  border-radius: none;
+background-color: #404bbf;
+} 
 .form-icon-close {
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+}
+.form-icon-close:hover,
+.form-icon-close:focus {
+  fill: #fff;
+}
+
+.cont-input {
+  margin-bottom: 8px;
 }
 .form-label {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
+  line-height: 1.2;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  padding-bottom: 4px;
 }
-.form-imput.name {
-  border: 1px solid #4d5ae5;
+.input-wrapper-person {
+  position: relative;
+}
+.form-icon.form-icon-person:hover,
+.form-icon.form-icon-person:focus {
+  fill: #4d5ae5;
   }
+
+ .form-icon {
+  fill: #2e2f42;
+ }
+.input-wrapper-person:hover,
+.input-wrapper-person:focus {
+  border: 1px solid #4d5ae5;
+   }
+   .line-person {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    border: 1.25px solid #000;
+width: 18px;
+height: 0px;
+transform: rotate(-90deg);
+}
 .form-imput {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
@@ -584,17 +659,15 @@ stroke: rgba(0, 0, 0, 0.1);
 }
 .input-wrapper-phone {
   position: relative;
-  margin-top: 8px;
-  margin-bottom: 4px;
-}
-.form-icon-phone {
+  }
+.form-icon.phone {
   position: absolute;
   top: 8px;
   left: 16px;
 }
 .input-wrapper-person {
   position: relative;
-  margin-bottom: 8px;
+  
 }
 .form-icon-person {
   position: absolute;
@@ -605,19 +678,17 @@ stroke: rgba(0, 0, 0, 0.1);
   position: relative;
    margin-bottom: 26px;
 }
-.form-label-email {
-  margin-top: 8px;
-  margin-bottom: 4px;
-}
-.form-icon-email {
+.form-icon.email {
   position: absolute;
   top: 8px;
   left: 16px;
+  margin-bottom: 4px;
 }
+
 .form-imput-comment {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  width: 360px;
+  width: 100%;
   height: 120px;
 }
 .form-imput-comment::placeholder {
@@ -626,6 +697,8 @@ stroke: rgba(0, 0, 0, 0.1);
   font-size: 12px;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
+  padding-top: 8px;
+  padding-left: 16px;
 }
 .form-imput:focus {
   border-radius: 4D5AE5;
@@ -634,10 +707,6 @@ stroke: rgba(0, 0, 0, 0.1);
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #4d5ae5;
-}
-.input-wrapper-checkbox {
-  width: 360px;
-height: 16px;
 }
 .checkbox-modal {
   width: 16px;
@@ -649,23 +718,40 @@ line-height: 1.2;
 letter-spacing: 0.04em;
 color: #8e8f99;
 }
-.checkbox-modal:hover {
+.checkbox-modal+.accept-label>.form-icon-vector {
   border-radius: 2px;
-fill: #404bbf;
+background-color: #404bbf;
 border: 1px solid #404bbf;
 }
-.form-button {
+.accept-label {
+  font-weight: 400;
+font-size: 12px;
+line-height: 1.2;
+letter-spacing: 0.04em;
+color: #8e8f99;
+}
+.privace {
+line-height: 133%;
+text-decoration: underline;
+text-decoration-skip-ink: none;
+color: #4d5ae5;
+}
+.blok-btn-modal {
   display: block;
-  margin: auto;
-  border-radius: 4px;
+  background-color: #4d5ae5;
+  color: #fff;
   padding: 16px 32px;
   width: 169px;
   height: 56px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background: #4d5ae5;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  text-align: center;
-  color: #fff;
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.blok-btn-modal:hover,
+.blok-btn-modal:focus {
+  background-color: #404bbf;
 }
