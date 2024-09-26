@@ -700,11 +700,11 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cu
   letter-spacing: 0.04em; 
   resize: none;
   color: rgba(46, 47, 66, 0.4); 
-  border: 1px solid rgba(46, 47, 66, 0.4)
-  background-color: transparent; 
+  border: 1px solid rgba(46, 47, 66, 0.4);
   padding: 8px 16px;
   outline: transparent; 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
 }
 .cont-input-text {
   margin-bottom: 16px;
@@ -747,7 +747,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cu
 border-radius: 2px;
 border: 1px solid rgba(46, 47, 66, 0.4);
 }
-.checkbox-modal:checked > .custom-checkbox {
+.checkbox-modal:checked + .accept-label + .custom-checkbox > .form-icon-vector{
   fill: #F4F4FD;
 }
 .form-icon-vector:hover,
@@ -756,7 +756,6 @@ border: 1px solid rgba(46, 47, 66, 0.4);
 }
 .checkbox-modal:checked + .accept-label > .custom-checkbox {
   background-color: #404bbf;
-  fill: #F4F4FD;
   border: none;
 }
 .checkbox-modal:focus + .accept-label > .custom-checkbox {
