@@ -476,7 +476,12 @@ img {
   display: inline;
    width: 453px;
   height: 80px;
-
+}
+.footer-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
 }
 .fotter-p {
   font-weight: 500;
@@ -491,48 +496,53 @@ margin-bottom: 16px;
   align-items: center;
   justify-content: center;
 }
-.label-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.form-imput-footer {
+.form-input-footer {
   width: 264px;
   height: 40px;
   background-color: #2e2f42;
-  border: 1px solid #fff;
+  border: 1px solid #ffffff;
 border-radius: 4px;
 margin-right: 24px;
+font-size: 12px;
+line-height: 2;
+letter-spacing: 0.04em;
+padding-left: 16px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+color: #ffffff;
 }
 
 .form-button-footer {
   display: flex;
   justify-content: center;
-       border-radius: 4px;
+  align-items: center;
+  border-radius: 4px;
 padding-top: 8px;
 padding-left: 24px;
-width: 165px;
+min-width: 165px;
 height: 40px;
-background: #4d5ae5;
+background-color: #4d5ae5;
+font-family: "Roboto", sans-serif;
 font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.04em;
-color: #fff;
+color: #ffffff;
+cursor: pointer;
+border: none;
 }
 .form-icon-send {
   fill: #fff;
   margin-left: 16px;
 }
-.form-imput-footer::placeholder {
+.form-input-footer::placeholder {
   padding-top: 8px;
   padding-left: 16px;
   font-weight: 400;
 font-size: 12px;
 line-height: 2;
 letter-spacing: 0.04em;
-color: #fff;
-
+color: #ffffff;
 }
 
 /*---------------/footer----------*/
@@ -551,8 +561,7 @@ color: #fff;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-  visibility: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .modal-overlay.is-open {
   opacity: 1;
@@ -571,7 +580,6 @@ color: #fff;
   min-height: 584px;
   transform: translate(-50%, -50%);
   padding: 24px 24px;
-   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .modal-overlay:not(.is-open) .modal {
   transform: translate(-50%, -100%) scale(1.5);
@@ -584,8 +592,8 @@ color: #fff;
   text-align: center;
   color: #2e2f42;
   margin-top: 48px;
-  margin-bottom: 24px;
-
+  line-height: 1.5;
+  margin-bottom: 16px; 
 }
 .input-wrapper-close {
   display: flex;
@@ -597,20 +605,24 @@ color: #fff;
   width: 24px;
   height: 24px;
   margin-right: 0;
+  padding: 0;
   background-color: #e7e9fc;
   border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
  stroke-width: 1px;
 stroke: rgba(0, 0, 0, 0.1);
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+cursor: pointer;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .input-wrapper-close:hover,
 .input-wrapper-close:focus {
-  border-radius: none;
-background-color: #404bbf;
+  border: none;
+  background-color: #404bbf;
+  fill: #ffffff;
 } 
 .form-icon-close {
   fill: #2e2f42;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .form-icon-close:hover,
 .form-icon-close:focus {
@@ -621,16 +633,19 @@ background-color: #404bbf;
   margin-bottom: 8px;
 }
 .form-label {
+  display: block;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.2;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  padding-bottom: 4px;
+  margin-bottom: 4px;
+  line-height: 1.17;
 }
  
  .input-wrapper {
   position: relative;
+  margin-bottom: 16px; 
 }
 .input-wrapper:hover,
 .input-wrapper:focus {
@@ -641,6 +656,10 @@ background-color: #404bbf;
   border-radius: 4px;
   width: 100%;
   height: 40px;
+  background-color: transparent;
+  padding-left: 38px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-imput:focus {
   border: 1px solid #4d5ae5;
@@ -651,6 +670,8 @@ background-color: #404bbf;
   left: 16px;
   fill: #2e2f42;
   transform: translateY(-50%);
+  height: 24px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
  }
 .form-icon:hover,
 .form-icon:focus {
@@ -669,7 +690,16 @@ background-color: #404bbf;
   border-radius: 4px;
   width: 100%;
   height: 120px;
+  font-size: 12px;
+  line-height: 1.17; 
+  letter-spacing: 0.04em; 
   resize: none;
+  color: rgba(46, 47, 66, 0.4); 
+  border: 1px solid rgba(46, 47, 66, 0.4)
+  background-color: transparent;
+  padding: 8px 16px; 
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-imput-comment::placeholder {
   font-weight: 400;
@@ -678,6 +708,9 @@ background-color: #404bbf;
   color: rgba(46, 47, 66, 0.4);
   padding-top: 8px;
   padding-left: 16px;
+}
+.form-imput-comment:focus {
+border-color: #4D5AE5; 
 }
 .form-imput:focus {
   border-radius: 4D5AE5;
@@ -688,7 +721,7 @@ background-color: #404bbf;
   color: #4d5ae5;
 }
 .input-wrapper-checkbox {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .custom-checkbox {
@@ -701,6 +734,7 @@ background-color: #404bbf;
 border: 1px solid rgba(46, 47, 66, 0.4);
 cursor: pointer;
 fill: transparent;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox-modal {
 border-radius: 2px;
@@ -711,9 +745,14 @@ border: 1px solid rgba(46, 47, 66, 0.4);
 .form-icon-vector:focus {
   fill: #ffffff;
 }
+.checkbox-modal:checked {
+  border: none;
+  fill: #F4F4FD;
+}
 .checkbox-modal:checked + .accept-label > .custom-checkbox {
   background-color: #404bbf;
   fill: #ffffff;
+  
  }
 .checkbox-modal:focus + .accept-label > .custom-checkbox {
  background-color: #404bbf;
@@ -725,11 +764,12 @@ border: 1px solid rgba(46, 47, 66, 0.4);
  }
 
 .accept-label {
-  font-weight: 400;
+font-weight: 400;
 font-size: 12px;
 line-height: 1.2;
 letter-spacing: 0.04em;
 color: #8e8f99;
+line-height: 1.17;
 }
 .privace {
 line-height: 133%;
@@ -742,8 +782,11 @@ color: #4d5ae5;
   background-color: #4d5ae5;
   color: #fff;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
+  font-weight: 500px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   margin-top: 24px;
   margin-left: auto;
   margin-right: auto;
